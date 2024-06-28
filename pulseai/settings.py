@@ -23,9 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure--cugs^!iq-mu%=1y+sx#=by^!31my4n+r#umr@1i0*+=am%6pf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*", ".vercel.app"]
 
 
 # Application definition
@@ -124,6 +125,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+STATIC_ROOT = BASE_DIR / "static_files"
 
 
 # Base url to serve media files
