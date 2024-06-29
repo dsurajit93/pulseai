@@ -2,44 +2,44 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
-GENDER_OPTIONS = {
-    'M': 'Male',
-    'F': "Female"
-}
+GENDER_OPTIONS = [
+    ('M', 'Male'),
+    ('F', "Female"),
+]
 
-CHEST_PAIN_OPTIONS = {
-    'TA': 'Typical Angina',
-    'ATA': 'Atypical Angina', 
-    'NAP': 'Non-Anginal Pain', 
-    'ASY': 'Asymptomatic'
-}
+CHEST_PAIN_OPTIONS = [
+    ('TA', 'Typical Angina'),
+    ('ATA', 'Atypical Angina'),
+    ('NAP', 'Non-Anginal Pain'),
+    ('ASY', 'Asymptomatic'),
+]
 
-BLOOD_SUGER_OPTIONS = {
-    '0': "Less than or equal to 120",
-    '1': "More than to 120"
-}
-RESTING_ECG_OPTIONS = {
-    'Normal': 'Normal', 
-    'ST': 'Having ST-T wave abnormality', 
-    'LVH': "Showing probable or definite left ventricular hypertrophy by Estes' criteria"
-}
+BLOOD_SUGER_OPTIONS = [
+    ('0', "Less than or equal to 120"),
+    ('1', "More than to 120"),
+]
+RESTING_ECG_OPTIONS = [
+    ('Normal', 'Normal'),
+    ('ST', 'Having ST-T wave abnormality'),
+    ('LVH', "Showing probable or definite left ventricular hypertrophy by Estes criteria"),
+]
 
-EXERCISE_ANGINA_OPTIONS = {
-    'Y': 'Yes',
-    'N': 'No'
-}
+EXERCISE_ANGINA_OPTIONS = [
+    ('Y', 'Yes'),
+    ('N', 'No'),
+]
 
-ST_SLOPE_OPTIONS = {
-    'Flat': 'Flat', 
-    'Up': 'Upsloping', 
-    'Down': 'Downsloping'
-}
+ST_SLOPE_OPTIONS = [
+    ('Flat', 'Flat',),
+    ('Up', 'Upsloping'),
+    ('Down', 'Downsloping'),
+]
 
-APPOINTMENT_STATUS_OPTION = {
-    "Booked": "Booked",
-    "Visited": "Visited",
-    "Canceled": "Canceled",
-}
+APPOINTMENT_STATUS_OPTION = [
+    ("Booked", "Booked"),
+    ("Visited", "Visited"),
+    ("Canceled", "Canceled"),
+]
 
 class HeartVital(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
